@@ -1,40 +1,36 @@
 package Wow1;
 
-import java.util.ArrayList;
-import java.util.HashMap;
+import java.util.*;
 
 public class Recipes {
     String name;
-    String ingredientName;
-    int amount;
 
     public Recipes(String name) {
         this.name = name;
     }
 
-    @Override
-    public String toString() {
-        return "Recipes{" +
-                "name='" + name + '\'' +
-                '}';
+    public Recipes() {
     }
 
-    public static void main(String[] args) {
+    @Override
+    public String toString() {
+        return name;
+    }
 
-        Recipes recipe1 = new Recipes("Recipe 1");
+    public void addstuff(ArrayList<Recipes> recipesArrayList) {
+        HashMap<String, Double> ingredientMap = new HashMap<>();
 
-        HashMap<Integer,String> ingredientMap = new HashMap<>();
+        ArrayList<Ingredient> recipeIngredients = new ArrayList<>();
 
+        Recipes recipe1 = new Recipes("Potion 1");
+        Recipes recipe2 = new Recipes("Potion 2");
 
-        ArrayList<Recipes> recipeArray = new ArrayList<>();
-        ArrayList<String> recipeIngredients = new ArrayList<>();
+        ingredientMap.put("Ingredient 1", 50.0);
+        Ingredient ingredient1 = new Ingredient("Ingredient 1", ingredientMap.get("Ingredient 1"));
 
-        recipeIngredients.add(0,"Ingredient 1");
-        recipeIngredients.add(1,"Ingredient 2");
-
-        recipeArray.add(recipe1);
-        recipeArray.forEach(System.out::println);
-
+        recipesArrayList.add(recipe1);
+        recipesArrayList.add(recipe2);
+        recipeIngredients.add(ingredient1);
 
     }
 }
