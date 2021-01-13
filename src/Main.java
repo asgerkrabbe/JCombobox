@@ -6,7 +6,7 @@ public class Main {
         ComboBoxExample1 comBox1 = new ComboBoxExample1();
         ComboBoxExample comBox = new ComboBoxExample();
 
-        //comBox.comboBox();
+        comBox.comboBox();
         
     }
 
